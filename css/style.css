@@ -19,5 +19,70 @@
 }
 
 body {
-    background-color: var(--portfolio-light-green);
+    background-color: var(--portfolio-gray);
+}
+
+.sec01>p:nth-of-type(1) {
+    color: green;
+}
+
+.sec01>p:nth-child(2) {
+    text-decoration: underline;
+}
+
+.sec01 ul:nth-of-type(2) li:nth-of-type(2) {
+    font-size: 24px;
+}
+
+input[type=text],
+input[type=submit],
+textarea {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    appearance: none;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    border: 1px solid var(--portfolio-black);
+    background-color: var(--portfolio-white);
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid var(--portfolio-green);
+}
+
+input:required {
+    background-color: pink;
+}
+
+label:has(input[required]) span::after {
+    content: "必須";
+    font-size: 0.8em;
+    display: inline-block;
+    background-color: var(--portfolio-green);
+    color: var(--portfolio-white);
+    border-radius: 3px;
+    padding-inline: 6px;
+    padding-block: 3px;
+    margin-inline-start: 5px;
+}
+
+input[type=submit] {
+    border-radius: 8px;
+    background-color: var(--portfolio-green);
+    color: var(--portfolio-white);
+    padding-inline: 13px;
+    padding-bottom: 8px;
+}
+
+input[type=submit]:disabled {
+    background-color: var(--portfolio-gray);
+    color: var(--portfolio-black);
+    border: 1px solid var(--portfolio-black);
+    opacity: 0.5;
 }
